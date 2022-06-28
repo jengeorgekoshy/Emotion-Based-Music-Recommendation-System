@@ -77,16 +77,9 @@ def camera():
     return render_template("index.html",final_output=final_output1,scroll = 'main')
 
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app.run(debug=True)
-
-
-
-
-
-
-
-
 
 
 

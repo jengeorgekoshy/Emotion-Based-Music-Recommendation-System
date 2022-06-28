@@ -1,1 +1,1 @@
-web: gunicorn videoTester:app
+web: gunicorn app:app
