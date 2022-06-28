@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation System</title>
+    <link rel="shortcut icon" href="./images/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/style.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--====================NAVBAR===============================-->
+    <header>
+        <a href="#" onclick="window.location.href = 'http://127.0.0.1:5000/';">
+            <h1>Emosic</h1>
+        </a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="nav">
+            <li><a href="#" class="nav-link" onclick="window.location.href = 'http://127.0.0.1:5000/';">Home</a></li>
+            <li><a href="#main" class="nav-link" onclick="showAllSongs()" id="song-link">Songs</a></li>
+        </ul>
+    </header>
+    <!--====================END OF NAVBAR===============================-->
+
+    <!--====================HOME===============================-->
+    <div id="home">
+      <div class="home-text">
+        <h1>Emotion Based Music Recommendation System</h1>
+        <button class="square_btn"><a href="/camera">SCAN YOUR EMOTION</a></button>
+        {% if final_output %}
+          <h2 style="font-family:Bio-Rhyme;font:40px">You look <span id="fo">{{final_output}}</span></h2>
+          <h2 style="font-family:Bio-Rhyme;font:40px">Click below to view songs based on your emotion</h2>
+          <script>
+            document.getElementById('song-link').style.display = 'none';
+            fo = document.getElementById("fo").innerText
+          </script>
+          <a href="#main">
+            <div class="mouse_scroll" onclick="songEmotion(fo)" onclick="window.location.href = 'http://127.0.0.1:5000/#main';">
+              <div class="mouse">
+                <div class="wheel"></div>
+              </div>
+              <div>
+                <span class="m_scroll_arrows unu"></span>
+                <span class="m_scroll_arrows doi"></span>
+                <span class="m_scroll_arrows trei"></span>
+              </div>
+            </div>
+          </a>
+          {% endif %}
+      </div>
+    </div>
+    <!--====================END OF HOME===============================-->
+    <main id="main"></main>
+    <script src="../static/script.js"></script>
+    <script src="../static/predicted_songs.json"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
