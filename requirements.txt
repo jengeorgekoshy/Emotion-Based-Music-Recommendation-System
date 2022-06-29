@@ -29,7 +29,7 @@ itsdangerous
 jaraco.itertools
 Jinja2
 joblib
-keras==2.2.4
+keras
 Keras-Preprocessing
 kiwisolver
 lazy-object-proxy
