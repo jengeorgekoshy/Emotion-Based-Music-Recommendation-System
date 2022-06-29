@@ -46,6 +46,7 @@ opencv-contrib-python>=4.5.5.64
 opencv-python>=4.5.2.52
 opencv-python-headless>=4.5.2.52
 opt-einsum==3.3.0
+ordereddict
 packaging==21.3
 pandas
 Pillow==8.4.0
