@@ -71,7 +71,8 @@ setuptools-scm
 sklearn
 soupsieve
 spotipy==2.19.0
-tensorflow==2.0.0
+tensorflow==2.1.0
+tensorflow-estimator==2.8.0
 tf-estimator-nightly
 threadpoolctl
 tokenizers
