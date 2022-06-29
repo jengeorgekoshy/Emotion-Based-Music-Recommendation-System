@@ -1,7 +1,7 @@
 Flask
 gunicorn
 Jinja2
-keras
+keras==2.3.1
 Keras-Preprocessing
 matplotlib
 np-utils
