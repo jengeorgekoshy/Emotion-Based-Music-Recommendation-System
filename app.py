@@ -1,4 +1,3 @@
-import os
 import cv2
 import numpy as np
 from keras.models import model_from_json
@@ -14,9 +13,7 @@ model.load_weights('fer.h5')
 face_haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 
-
-from distutils.log import debug
-from flask import Flask, request, render_template
+from flask import Flask, render_template
 #WSGI application
 app = Flask(__name__)
 
@@ -25,7 +22,7 @@ app = Flask(__name__)
 def hello():
     return render_template("index.html")
 
-@app.route('/camera')
+@app.route('/camera',methods = ['GET', 'POST'])
 def camera():
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     i=0
@@ -76,5 +73,7 @@ def camera():
     # id will be the given id or None if not available
     return render_template("index.html",final_output=final_output1,scroll = 'main')
 
+if __name__ == '__main__':
+    app.run(debug=True)
 
 quit()
