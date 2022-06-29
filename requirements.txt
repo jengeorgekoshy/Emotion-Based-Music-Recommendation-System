@@ -3,3 +3,4 @@ keras==2.9.0
 Flask
 opencv-contrib-python-headless
 numpy
+gunicorn
