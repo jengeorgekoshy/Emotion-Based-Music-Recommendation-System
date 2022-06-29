@@ -27,7 +27,7 @@ def hello():
 
 @app.route('/camera',methods = ['GET', 'POST'])
 def camera():
-#     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 #     i=0
 #     output = []
 #     while i<=30:
