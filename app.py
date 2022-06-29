@@ -73,7 +73,6 @@ def camera():
 
     cap.release()
     cv2.destroyAllWindows
-    id will be the given id or None if not available
     return render_template("index.html",final_output=final_output1,scroll = 'main')
 
 if __name__ == '__main__':
