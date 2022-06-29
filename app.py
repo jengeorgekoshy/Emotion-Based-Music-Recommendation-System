@@ -1,4 +1,4 @@
-# import cv2
+import cv2
 
 
 from flask import Flask, render_template
@@ -25,8 +25,8 @@ app = Flask(__name__)
 def hello():
     return render_template("index.html")
 
-# @app.route('/camera',methods = ['GET', 'POST'])
-# def camera():
+@app.route('/camera',methods = ['GET', 'POST'])
+def camera():
 #     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 #     i=0
 #     output = []
@@ -74,7 +74,7 @@ def hello():
 #     cap.release()
 #     cv2.destroyAllWindows
     # id will be the given id or None if not available
-#     return render_template("index.html",final_output=final_output1,scroll = 'main')
+    return render_template("index.html",final_output=final_output1,scroll = 'main')
 
 if __name__ == '__main__':
     app.run(debug=True)
