@@ -25,8 +25,8 @@ app = Flask(__name__)
 def hello():
     return render_template("index.html")
 
-@app.route('/camera',methods = ['GET', 'POST'])
-def camera():
+# @app.route('/camera',methods = ['GET', 'POST'])
+# def camera():
 #     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 #     i=0
 #     output = []
@@ -73,7 +73,7 @@ def camera():
 
 #     cap.release()
 #     cv2.destroyAllWindows
-    return render_template("index.html",final_output=final_output1,scroll = 'main')
+#     return render_template("index.html",final_output=final_output1,scroll = 'main')
 
 if __name__ == '__main__':
     app.run(debug=True)
