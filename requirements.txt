@@ -1,16 +1,16 @@
 Flask
-gunicorn==20.1.0
-Jinja2==3.1.2
-keras==2.8.0
-Keras-Preprocessing==1.1.2
-matplotlib==3.5.0
-np-utils==0.6.0
+gunicorn
+Jinja2
+keras
+Keras-Preprocessing
+matplotlib
+np-utils
 numpy
 opencv-contrib-python-headless
 pandas
-scikit-learn==1.1.1
-scipy==1.7.3
-sklearn==0.0
+scikit-learn
+scipy
+sklearn
 spotipy==2.19.0
 tensorflow==2.0
 
