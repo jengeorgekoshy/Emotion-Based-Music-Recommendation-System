@@ -3,7 +3,7 @@ import cv2
 
 from flask import Flask, render_template
 import numpy as np
-from tf.keras.models import model_from_json
+from tensorflow.keras.models import model_from_json
 from keras.preprocessing import image
 import statistics as st
 
