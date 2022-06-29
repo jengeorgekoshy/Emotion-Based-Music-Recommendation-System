@@ -3,14 +3,14 @@ import cv2
 
 from flask import Flask, render_template
 import numpy as np
-from keras.models import model_from_json
+from tf.keras.models import model_from_json
 from keras.preprocessing import image
 import statistics as st
 
 #load model
-# model = model_from_json(open("fer.json", "r").read())
-# #load weights
-# model.load_weights('fer.h5')
+model = model_from_json(open("fer.json", "r").read())
+#load weights
+model.load_weights('fer.h5')
 
 
 face_haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
