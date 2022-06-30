@@ -1,5 +1,5 @@
-tensorflow==2.0.0
-keras==2.9.0
+tensorflow
+keras
 Flask
 opencv-contrib-python-headless
 numpy
